@@ -100,12 +100,6 @@ function changeRoom() {
   window.location.href = '/static/coms.html?room='+toGo;
 }
 
-// On page load
-if (getCookie('user') !== "" && getCookie('user') !== undefined) {
-  socket.emit('auth', [getCookie("user"), parseInt(getCookie("key"))]);
-  var username = getCookie("user");
-}
-
 // Callbacks
 vis(function(){
     if (vis()) {changeIco('/static/favicon.png');}
