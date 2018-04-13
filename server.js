@@ -30,8 +30,6 @@ io.on('connection', function(socket){
   socket.on('disconnect', function(){
     if (users[socket.id] !== undefined) {
       header='> User [';
-      if (authList[users[socket.id].name]['admin']) {
-        header = "> Admin [<img src='/static/admin.png'> "}
       io.to(users[socket.id].room).emit('message', header+"<span style='"+authList[users[socket.id].name]['nameStyle']+"'>"+users[socket.id].name+"</span>] has left");
       delete users[socket.id];
     }
@@ -45,8 +43,6 @@ io.on('connection', function(socket){
     };
     socket.join(data[1]);
     header='> User [';
-    if (authList[data[0]]['admin']) {
-      header = "> Admin [<img src='/static/admin.png'> "}
     io.to(data[1]).emit('message', header+"<span style='"+authList[data[0]]['nameStyle']+"'>"+data[0]+"</span>] has joined!");
   });
 
@@ -69,9 +65,6 @@ io.on('connection', function(socket){
       var senderName = users[socket.id].name;
       if (send) {
         var header = '';
-        if (authList[senderName]['admin']) {
-          header = "<img src='/static/admin.png'> "}
-
         // Graft together an unnecessarily complicated packet =)
         var packet = "["+header+"<span style='"+authList[senderName]['nameStyle']+"'>"+senderName+"</span>] "+data;
         if(users[socket.id] !== undefined) {io.to(users[socket.id].room).emit('message', packet);}
