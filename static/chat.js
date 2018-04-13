@@ -109,7 +109,6 @@ if (getCookie('user') !== "" && getCookie('user') !== undefined) {
 // Callbacks
 vis(function(){
     if (vis()) {changeIco('/static/favicon.png');}
-    //changeIco(vis() ? '/static/favicon.png' : '/static/alert.png');
 });
 
 // Error logging
