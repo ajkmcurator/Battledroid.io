@@ -101,7 +101,6 @@ function changeRoom() {
 }
 
 // On page load
-//console.log(getCookie('user'));
 if (getCookie('user') !== "" && getCookie('user') !== undefined) {
   socket.emit('auth', [getCookie("user"), parseInt(getCookie("key"))]);
   var username = getCookie("user");
@@ -119,11 +118,9 @@ socket.on('err', function(data){
 });
 
 socket.on('a-ok', function(){
-  console.log("A-OK recieved!");
   document.getElementById("logout").hidden = false;
   room = getUrlVars()['room'];
   if (room == undefined) {room = 'lobby';}
-  //console.log(room);
   socket.emit('join', [getCookie("user"), room]);
   document.getElementById("roomName").innerHTML = "Room : "+room;
 });
@@ -137,7 +134,6 @@ socket.on('users online', function(data){
 
 socket.on("message", function(data){
   // Add message
-  // console.log(data);
   var start='<div>'
   if (data.includes('@'+username)) {
     if (!vis()) {changeIco('/static/alert.png');}
