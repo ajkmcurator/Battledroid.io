@@ -10,7 +10,6 @@ var fs = require('fs');
 var stdin = process.openStdin();
 
 // Variables
-var cmdHelp = "?adduser [user] [hash] : Adds a user<br>?rmuser [user] : Removes a user<br>?broadcast [msg] : Sends msg under _System<br>?ban [user] : Bans a user from the chat"
 var users = {};                         // List of logged-in users
 var authList = require('./users.json'); // The list of authenticated users
 
