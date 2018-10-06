@@ -1,6 +1,6 @@
 //Variables
 list adminList = [Worf];//Add more
-list adminPasswordList = [];
+list adminPasswordList = [];//Add more
 //On Load
 
 //Functions
