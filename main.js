@@ -4,6 +4,36 @@ list adminPasswordList = [];//Add more
 //On Load
 
 //Functions
+function checkAdminPassword(string password, string username)
+{
+  encryptedPassword = encrypt(password);
+  for (pass in adminPasswordList)
+  {
+    encPass = encrypt(pass);
+    if (encPass == encryptedPassword)
+    {
+      for i in range(i=0;i++;i=len(adminList))
+      {
+        if (adminPasswordList[i] == encryptedPassword == encPass)
+        {
+          userName = adminList[i];
+          if (userName == username)
+          {
+            //logIn
+          }
+          else
+          {
+            //incorrectUsername
+          }
+        }
+      }
+    }
+    else
+    {
+      //incorrectPassword
+    }
+  }
+}
 function encrypt(string text)
 {
   var textParts = text.split("");
