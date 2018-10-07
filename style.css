@@ -1,1 +1,6 @@
-
+#playButton
+{
+  position: absolute;
+  center;
+  bottom: 50%;
+}
