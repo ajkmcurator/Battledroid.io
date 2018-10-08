@@ -1,1 +1,2 @@
-#this is a joke
+def main():
+  print("hi")
