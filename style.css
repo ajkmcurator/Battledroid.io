@@ -10,3 +10,21 @@
   left: 100%;
   bottom: 0;
 }
+#rightStartPageImg
+{
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+}
+#bottomStartPageImg
+{
+  position: absolute;
+  center;
+  bottom: 0;
+}
+#topStartPageImg
+{
+  position: absolute;
+  center;
+  top: 0;
+}
