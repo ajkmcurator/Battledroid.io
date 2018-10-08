@@ -4,3 +4,9 @@
   center;
   bottom: 50%;
 }
+#leftStartPageImg
+{
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+}
