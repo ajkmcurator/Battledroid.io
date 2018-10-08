@@ -1,2 +1,1 @@
-def main():
-  #write this
+import time
